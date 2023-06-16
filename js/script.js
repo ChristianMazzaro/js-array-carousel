@@ -44,53 +44,47 @@ const _Button = document.getElementById('_Button');
 
 _Button.addEventListener('click', function() {
 
+    let next = document.getElementsByClassName(`_image`);
+
+    console.log(next);
+        
+    next[j].classList.remove('selected');
+
     j += 1;
 
-    alert('cliccato');
+    if(j > 4){
 
-    //sto bastardo deve capire che deve mettere la classe all'immagine dopo togliendola a quella prima
-    //abbiamo un modo per definirle? si, l'array
-    //e ora che le conosciamo che cazzo ci facciamo?
+        j = 0;
 
+    }
 
-        let next = document.getElementsByClassName(`_image`);
+    next[j].classList.add('selected');
 
-        console.log(next);
-        
-        
-            if(j === 1 ) {
-
-                
-                next[0].classList.remove('selected');
-                next[1].classList.add('selected');
-                console.log(i);
-                
-            }
-            
-            else if(j === 2 ){
-                
-                
-                next[1].classList.remove('selected');
-                next[2].classList.add('selected');
-                console.log(i);
-
-            }
-
-            else if(j === 3 ){
-                
-                
-                next[2].classList.remove('selected');
-                next[3].classList.add('selected');
-                console.log(i);
-
-            }
-
-            else{
-
-                next[3].classList.remove('selected');
-                next[4].classList.add('selected');
-                console.log(i);
-
-            }
+    console.log(j);
     
 });
+
+const _ButtonUp = document.getElementById('_ButtonUp');
+
+_ButtonUp.addEventListener('click', function() {
+
+    let next = document.getElementsByClassName(`_image`);
+
+    console.log(next);
+        
+    next[j].classList.remove('selected');
+
+    j -= 1;
+
+    if(j < 0){
+
+        j = 4;
+
+    }
+
+    next[j].classList.add('selected');
+
+    console.log(j);
+    
+});
+
