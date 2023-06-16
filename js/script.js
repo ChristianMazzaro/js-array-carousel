@@ -21,8 +21,9 @@ console.log(imageList[4]);
 
 for (let i = 0; i < imageList.length; i++){
 
-    const newImg = document.createElement('img');
-    newImg.innerHTML = '' + `<img src="${i}">`;
+    const newImg = document.createElement("div");
+    newImg.classList.add("_image");
+    newImg.innerHTML = '' + `<img src="${imageList[i]}">`;
 
     console.log(i);
 
