@@ -28,7 +28,6 @@ GENERAL
 }
 
 .images{
-
     position: relative;
     width: 700px;
     height: 300px;
@@ -43,7 +42,6 @@ GENERAL
 ._image > img{
     height: 100%;
     width: 100%;
-
 }
 
 .selected{
